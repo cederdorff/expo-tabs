@@ -18,18 +18,19 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: Colors[colorScheme ?? "light"].tint
+                    backgroundColor: Colors[colorScheme].tint
                 },
                 headerTintColor: "#fff",
                 headerTitleStyle: {
                     fontWeight: "bold"
                 },
                 tabBarStyle: {
-                    backgroundColor: Colors[colorScheme ?? "light"].tint
+                    backgroundColor: Colors[colorScheme].tint
                 },
-                tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-                tabBarInactiveTintColor: "#fff",
-                tabBarActiveBackgroundColor: "#acc6c9"
+                tabBarActiveTintColor: Colors[colorScheme].tabIconSelected,
+                tabBarInactiveTintColor: Colors[colorScheme].tabIconDefault,
+                tabBarActiveBackgroundColor:
+                    Colors[colorScheme].tabIconActiveBackground
             }}>
             <Tabs.Screen
                 name="index"
@@ -46,7 +47,7 @@ export default function TabLayout() {
                                         name="info-circle"
                                         size={25}
                                         color={
-                                            Colors[colorScheme ?? "light"].text
+                                            Colors[colorScheme].tabIconDefault
                                         }
                                         style={{
                                             marginRight: 15,
